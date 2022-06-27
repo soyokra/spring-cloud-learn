@@ -16,7 +16,7 @@ public class OrderController {
     public @ResponseBody
     StdResponse<OrderResponse> getOrder() {
         OrderModel orderModel = new OrderModel();
-        orderModel.setOrderId("1234561212332");
+        orderModel.setOrderId("aaaa");
         OrderResponse orderResponse = new OrderResponse();
         orderResponse.setOrder(orderModel);
 
