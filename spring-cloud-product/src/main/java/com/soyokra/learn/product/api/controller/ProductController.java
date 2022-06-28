@@ -1,6 +1,6 @@
 package com.soyokra.learn.product.api.controller;
 
-import com.soyokra.learn.kernel.support.lib.StdResponse;
+import com.soyokra.learn.kernel.support.utils.ResponseUtils;
 import com.soyokra.learn.product.api.controller.response.ProductResponse;
 import com.soyokra.learn.product.domain.model.ProductModel;
 import com.soyokra.learn.product.support.feign.OrderFeign;
@@ -25,7 +25,7 @@ public class ProductController {
 
     @GetMapping(value = "select-product")
     public @ResponseBody
-    StdResponse<ProductResponse> getOrder() {
+    ResponseUtils<ProductResponse> getOrder() {
 
         //根据应用名称调用服务
         String json = restTemplate.getForObject("http://order/api/select-order", String.class);
@@ -37,6 +37,6 @@ public class ProductController {
         ProductResponse productResponse = new ProductResponse();
         productResponse.setProduct(productModel);
 
-        return StdResponse.success(productResponse);
+        return ResponseUtils.success(productResponse);
     }
 }

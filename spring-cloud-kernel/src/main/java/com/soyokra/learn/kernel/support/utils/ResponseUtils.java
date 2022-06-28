@@ -1,11 +1,11 @@
-package com.soyokra.learn.kernel.support.lib;
+package com.soyokra.learn.kernel.support.utils;
 
 import lombok.Data;
 
 import java.io.Serializable;
 
 @Data
-public class StdResponse<T> implements Serializable {
+public class ResponseUtils<T> implements Serializable {
 
     private int code;
 
@@ -13,29 +13,29 @@ public class StdResponse<T> implements Serializable {
 
     private T data;
 
-    public StdResponse() {
+    public ResponseUtils() {
 
     }
 
-    public StdResponse(int code, String message, T data) {
+    public ResponseUtils(int code, String message, T data) {
         this.code = code;
         this.message = message;
         this.data = data;
     }
 
-    public static <T> StdResponse<T> success() {
-        return new StdResponse<>(1, "success", null);
+    public static <T> ResponseUtils<T> success() {
+        return new ResponseUtils<>(1, "success", null);
     }
 
-    public static <T> StdResponse<T> success(T data) {
-        return new StdResponse<>(1, "success", data);
+    public static <T> ResponseUtils<T> success(T data) {
+        return new ResponseUtils<>(0, "success", data);
     }
 
-    public static <T> StdResponse<T> error(int code, String message, T data) {
-        return new StdResponse<>(code, message, data);
+    public static <T> ResponseUtils<T> error(int code, String message, T data) {
+        return new ResponseUtils<>(code, message, data);
     }
 
-    public static <T> StdResponse<T> error(int code, String message) {
+    public static <T> ResponseUtils<T> error(int code, String message) {
         return error(code, message, null);
     }
 

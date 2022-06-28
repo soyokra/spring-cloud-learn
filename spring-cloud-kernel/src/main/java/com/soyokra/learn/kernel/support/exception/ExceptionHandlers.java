@@ -1,7 +1,6 @@
 package com.soyokra.learn.kernel.support.exception;
 
-import com.soyokra.common.support.lib.StdResponse;
-import com.soyokra.common.support.log.LogTagConst;
+import com.soyokra.learn.kernel.support.utils.ResponseUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -15,32 +14,34 @@ import java.util.List;
 @Slf4j
 @ControllerAdvice
 public class ExceptionHandlers {
+    private static final String LOG_TAG = "system";
+    
     @ExceptionHandler(value = BaseException.class)
     @ResponseBody
-    public StdResponse<Object> baseException(HttpServletRequest request, BaseException e) {
-        log.error("[{}] ExceptionHandlers baseException, message: {}", LogTagConst.SYSTEM, e.getMessage(), e);
-        return StdResponse.error(e.getCode(), e.getMessage());
+    public ResponseUtils<Object> baseException(HttpServletRequest request, BaseException e) {
+        log.error("[{}] ExceptionHandlers baseException, message: {}", LOG_TAG, e.getMessage(), e);
+        return ResponseUtils.error(e.getCode(), e.getMessage());
     }
 
     @ExceptionHandler(value = AuthException.class)
     @ResponseBody
-    public StdResponse<Object> authException(HttpServletRequest request, AuthException e) {
-        log.error("[{}] ExceptionHandlers authException, message: {}", LogTagConst.SYSTEM, e.getMessage(), e);
-        return StdResponse.error(e.getCode(), e.getMessage());
+    public ResponseUtils<Object> authException(HttpServletRequest request, AuthException e) {
+        log.error("[{}] ExceptionHandlers authException, message: {}", LOG_TAG, e.getMessage(), e);
+        return ResponseUtils.error(e.getCode(), e.getMessage());
     }
 
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
-    public StdResponse<Object> exception(HttpServletRequest request, Exception e) {
-        log.error("[{}] ExceptionHandlers exception, message: {}", LogTagConst.SYSTEM, e.getMessage(), e);
+    public ResponseUtils<Object> exception(HttpServletRequest request, Exception e) {
+        log.error("[{}] ExceptionHandlers exception, message: {}", LOG_TAG, e.getMessage(), e);
         ExceptionModel exceptionModel = ExceptionModel.SERVER;
-        return StdResponse.error(exceptionModel.getCode(), e.getMessage());
+        return ResponseUtils.error(exceptionModel.getCode(), e.getMessage());
     }
 
     @ExceptionHandler(value = MethodArgumentNotValidException.class)
     @ResponseBody
-    public StdResponse<Object> methodArgumentNotValidException(HttpServletRequest request, MethodArgumentNotValidException e) {
-        log.error("[{}] ExceptionHandlers methodArgumentNotValidException, message: {}", LogTagConst.SYSTEM, e.getMessage(), e);
+    public ResponseUtils<Object> methodArgumentNotValidException(HttpServletRequest request, MethodArgumentNotValidException e) {
+        log.error("[{}] ExceptionHandlers methodArgumentNotValidException, message: {}", LOG_TAG, e.getMessage(), e);
         ExceptionModel exceptionModel = ExceptionModel.CLIENT_VALIDATE;
 
         List<ObjectError> errorList = e.getBindingResult().getAllErrors();
@@ -49,6 +50,6 @@ public class ExceptionHandlers {
             message = objectError.getDefaultMessage();
             break;
         }
-        return StdResponse.error(exceptionModel.getCode(), message);
+        return ResponseUtils.error(exceptionModel.getCode(), message);
     }
 }

@@ -1,7 +1,6 @@
 package com.soyokra.learn.kernel.support.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import java.io.UnsupportedEncodingException;
 import java.util.*;
 
@@ -14,7 +13,11 @@ public class PHPUtils {
      * http_build_query
      */
     public static String http_build_query(Map<String, Object> params){
-        return  StringUtils.trim(http_query_build_recursive(params,"",true),"", "&", false);
+        String str = http_query_build_recursive(params,"",true);
+        if (str.lastIndexOf("&") == (str.length() - 1)) {
+            str = str.substring(0, (str.length() - 2));
+        }
+        return str;
     }
 
     /**
@@ -54,11 +57,17 @@ public class PHPUtils {
         }
     }
 
+    /**
+     * array_filter
+     */
     public static Map<String, Object> array_filter(Map<String, Object> map) {
         map.entrySet().removeIf(entry -> empty(entry.getValue()));
         return map;
     }
 
+    /**
+     * empty
+     */
     public static Boolean empty(Object o) {
         if (o == null) {
             return Boolean.TRUE;

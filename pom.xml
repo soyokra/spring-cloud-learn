@@ -35,7 +35,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.soyokra</groupId>
+                <groupId>com.soyokra.learn</groupId>
                 <artifactId>spring-cloud-kernel</artifactId>
                 <version>${project.version}</version>
             </dependency>
