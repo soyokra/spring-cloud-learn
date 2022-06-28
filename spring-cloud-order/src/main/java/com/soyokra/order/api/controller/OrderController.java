@@ -1,14 +1,14 @@
-package com.soyokra.order.api.controller;
+package com.soyokra.order.api.controller.open;
 
-import com.soyokra.common.support.lib.StdResponse;
-import com.soyokra.order.api.controller.response.OrderResponse;
-import com.soyokra.order.api.domain.model.OrderModel;
+import com.soyokra.kernel.support.lib.StdResponse;
+import com.soyokra.order.api.controller.open.response.OrderResponse;
+import com.soyokra.order.domain.model.OrderModel;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping(value = "/api")
+@RequestMapping(value = "/api/open")
 @RestController
 public class OrderController {
 
