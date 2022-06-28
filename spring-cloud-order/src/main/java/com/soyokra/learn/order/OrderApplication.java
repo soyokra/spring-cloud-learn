@@ -1,4 +1,4 @@
-package com.soyokra.order;
+package com.soyokra.learn.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

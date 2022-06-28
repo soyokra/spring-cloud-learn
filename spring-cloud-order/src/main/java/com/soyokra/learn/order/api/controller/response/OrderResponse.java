@@ -1,6 +1,6 @@
-package com.soyokra.order.api.controller.response;
+package com.soyokra.learn.order.api.controller.response;
 
-import com.soyokra.order.domain.model.OrderModel;
+import com.soyokra.learn.order.domain.model.OrderModel;
 import lombok.Data;
 
 @Data

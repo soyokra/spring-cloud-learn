@@ -1,4 +1,4 @@
-package com.soyokra.product.boot;
+package com.soyokra.learn.product.boot;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;

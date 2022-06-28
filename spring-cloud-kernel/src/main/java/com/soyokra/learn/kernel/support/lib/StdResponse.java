@@ -1,4 +1,4 @@
-package com.soyokra.kernel.support.lib;
+package com.soyokra.learn.kernel.support.lib;
 
 import lombok.Data;
 

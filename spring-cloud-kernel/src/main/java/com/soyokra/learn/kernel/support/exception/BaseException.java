@@ -1,4 +1,4 @@
-package com.soyokra.kernel.support.exception;
+package com.soyokra.learn.kernel.support.exception;
 
 public class BaseException extends Exception {
     protected Integer code;

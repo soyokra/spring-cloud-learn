@@ -1,4 +1,4 @@
-package com.soyokra.kernel.support.exception;
+package com.soyokra.learn.kernel.support.exception;
 
 import com.soyokra.common.support.lib.StdResponse;
 import com.soyokra.common.support.log.LogTagConst;

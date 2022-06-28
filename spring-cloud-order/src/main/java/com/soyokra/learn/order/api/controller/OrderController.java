@@ -1,8 +1,8 @@
-package com.soyokra.order.api.controller;
+package com.soyokra.learn.order.api.controller;
 
-import com.soyokra.kernel.support.lib.StdResponse;
-import com.soyokra.order.api.controller.response.OrderResponse;
-import com.soyokra.order.domain.model.OrderModel;
+import com.soyokra.learn.kernel.support.lib.StdResponse;
+import com.soyokra.learn.order.api.controller.response.OrderResponse;
+import com.soyokra.learn.order.domain.model.OrderModel;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

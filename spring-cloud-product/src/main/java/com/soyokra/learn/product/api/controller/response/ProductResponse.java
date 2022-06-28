@@ -1,6 +1,6 @@
-package com.soyokra.product.api.controller.response;
+package com.soyokra.learn.product.api.controller.response;
 
-import com.soyokra.product.domain.model.ProductModel;
+import com.soyokra.learn.product.domain.model.ProductModel;
 import lombok.Data;
 
 @Data

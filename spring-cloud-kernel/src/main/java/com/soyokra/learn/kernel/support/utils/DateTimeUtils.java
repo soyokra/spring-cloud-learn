@@ -1,4 +1,4 @@
-package com.soyokra.kernel.support.utils;
+package com.soyokra.learn.kernel.support.utils;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

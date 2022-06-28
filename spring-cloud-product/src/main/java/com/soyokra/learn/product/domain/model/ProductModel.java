@@ -1,4 +1,4 @@
-package com.soyokra.product.domain.model;
+package com.soyokra.learn.product.domain.model;
 
 import lombok.Data;
 

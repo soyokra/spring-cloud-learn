@@ -1,4 +1,4 @@
-package com.soyokra.kernel.support.log;
+package com.soyokra.learn.kernel.support.log;
 
 /**
  * 日志标签，用于快速筛选日志

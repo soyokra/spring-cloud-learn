@@ -1,9 +1,9 @@
-package com.soyokra.product.api.controller;
+package com.soyokra.learn.product.api.controller;
 
-import com.soyokra.kernel.support.lib.StdResponse;
-import com.soyokra.product.api.controller.response.ProductResponse;
-import com.soyokra.product.domain.model.ProductModel;
-import com.soyokra.product.support.feign.OrderFeign;
+import com.soyokra.learn.kernel.support.lib.StdResponse;
+import com.soyokra.learn.product.api.controller.response.ProductResponse;
+import com.soyokra.learn.product.domain.model.ProductModel;
+import com.soyokra.learn.product.support.feign.OrderFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

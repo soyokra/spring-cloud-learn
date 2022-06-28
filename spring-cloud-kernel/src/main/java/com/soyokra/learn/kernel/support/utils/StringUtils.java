@@ -1,4 +1,4 @@
-package com.soyokra.kernel.support.utils;
+package com.soyokra.learn.kernel.support.utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;

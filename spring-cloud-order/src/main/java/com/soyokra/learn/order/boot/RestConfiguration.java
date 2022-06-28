@@ -1,4 +1,4 @@
-package com.soyokra.order.boot;
+package com.soyokra.learn.order.boot;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;

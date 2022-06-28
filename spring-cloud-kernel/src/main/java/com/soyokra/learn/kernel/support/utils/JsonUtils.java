@@ -1,4 +1,4 @@
-package com.soyokra.kernel.support.utils;
+package com.soyokra.learn.kernel.support.utils;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.type.TypeReference;

@@ -1,4 +1,4 @@
-package com.soyokra.kernel.support.exception;
+package com.soyokra.learn.kernel.support.exception;
 
 
 // 认证异常

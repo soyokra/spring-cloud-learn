@@ -1,4 +1,4 @@
-package com.soyokra.kernel.support.feign;
+package com.soyokra.learn.kernel.support.feign;
 
 import org.springframework.cloud.openfeign.FeignClient;
 
