@@ -2,38 +2,34 @@ package com.soyokra.learn.product.api.controller;
 
 import com.soyokra.learn.kernel.support.utils.ResponseUtils;
 import com.soyokra.learn.product.api.controller.response.ProductResponse;
+import com.soyokra.learn.product.boot.AppConfig;
 import com.soyokra.learn.product.domain.model.ProductModel;
 import com.soyokra.learn.product.support.feign.OrderFeign;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
+
 
 @RequestMapping(value = "/api")
 @RestController
 public class ProductController {
 
     @Resource
-    RestTemplate restTemplate;
-
-    @Autowired
     private OrderFeign orderFeign;
+
+    @Resource
+    private AppConfig appConfig;
 
     @GetMapping(value = "select-product")
     public @ResponseBody
     ResponseUtils<ProductResponse> getOrder() {
 
-        //根据应用名称调用服务
-        String json = restTemplate.getForObject("http://order/api/select-order", String.class);
-
-        orderFeign.selectOrder();
 
         ProductModel productModel = new ProductModel();
-        productModel.setProductId("bbbb");
+        productModel.setProductId(appConfig.getConfigTag());
         ProductResponse productResponse = new ProductResponse();
         productResponse.setProduct(productModel);
 

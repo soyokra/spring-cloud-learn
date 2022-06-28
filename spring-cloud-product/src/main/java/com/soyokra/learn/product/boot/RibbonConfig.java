@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class RibbonConfiguration {
+public class RibbonConfig {
     @Bean
     public IRule defaultLBStrategy() {
         return new RandomRule();
