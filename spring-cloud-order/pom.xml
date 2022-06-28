@@ -15,7 +15,7 @@
     <dependencies>
         <dependency>
             <groupId>com.soyokra</groupId>
-            <artifactId>spring-cloud-common</artifactId>
+            <artifactId>spring-cloud-kernel</artifactId>
         </dependency>
 
         <dependency>

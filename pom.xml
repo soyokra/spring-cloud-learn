@@ -9,12 +9,11 @@
     <packaging>pom</packaging>
     <name>spring cloud learn</name>
 
-    <!--用户请求 => gateway => book => product, order, pay -->
     <modules>
         <module>spring-cloud-eureka</module>
         <module>spring-cloud-config</module>
         <module>spring-cloud-gateway</module>
-        <module>spring-cloud-common</module>
+        <module>spring-cloud-kernel</module>
         <module>spring-cloud-book</module>
         <module>spring-cloud-product</module>
         <module>spring-cloud-order</module>
@@ -37,7 +36,7 @@
         <dependencies>
             <dependency>
                 <groupId>com.soyokra</groupId>
-                <artifactId>spring-cloud-common</artifactId>
+                <artifactId>spring-cloud-kernel</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

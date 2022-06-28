@@ -1,6 +1,6 @@
 package com.soyokra.product.api.controller;
 
-import com.soyokra.common.support.lib.StdResponse;
+import com.soyokra.kernel.support.lib.StdResponse;
 import com.soyokra.product.api.controller.response.ProductResponse;
 import com.soyokra.product.domain.model.ProductModel;
 import com.soyokra.product.support.feign.OrderFeign;

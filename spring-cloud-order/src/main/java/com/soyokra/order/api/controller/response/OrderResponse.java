@@ -1,4 +1,4 @@
-package com.soyokra.order.api.controller.open.response;
+package com.soyokra.order.api.controller.response;
 
 import com.soyokra.order.domain.model.OrderModel;
 import lombok.Data;

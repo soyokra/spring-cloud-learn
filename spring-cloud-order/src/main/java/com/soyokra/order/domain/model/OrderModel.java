@@ -1,4 +1,4 @@
-package com.soyokra.order.api.domain.model;
+package com.soyokra.order.domain.model;
 
 import lombok.Data;
 
