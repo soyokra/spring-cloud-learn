@@ -1,25 +1,27 @@
 package com.soyokra.learn.order.api.controller;
 
 import com.soyokra.learn.kernel.support.utils.ResponseUtils;
-import com.soyokra.learn.order.api.controller.response.OrderResponse;
-import com.soyokra.learn.order.domain.model.OrderModel;
+import com.soyokra.learn.order.api.controller.response.home.InfoResponse;
+import com.soyokra.learn.order.boot.AppConfig;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
+
 @RequestMapping(value = "/api")
 @RestController
-public class OrderController {
+public class HomeController {
 
-    @GetMapping(value = "select-order")
+    @Resource
+    private AppConfig appConfig;
+
+    @GetMapping(value = "info")
     public @ResponseBody
-    ResponseUtils<OrderResponse> getOrder() {
-        OrderModel orderModel = new OrderModel();
-        orderModel.setOrderId("aaaa");
-        OrderResponse orderResponse = new OrderResponse();
-        orderResponse.setOrder(orderModel);
-
-        return ResponseUtils.success(orderResponse);
+    ResponseUtils<InfoResponse> info() {
+        InfoResponse infoResponse = new InfoResponse();
+        infoResponse.setAppTags(appConfig.getAppTags());
+        return ResponseUtils.success(infoResponse);
     }
 }

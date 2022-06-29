@@ -1,10 +1,13 @@
+##eureka##
 eureka:
   client:
-    serviceUrl:
-      register-with-eureka: true
-      fetch-registry: true
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
       defaultZone: http://127.0.0.1:8090/eureka/
 
+
+##spring##
 spring:
   profiles:
     active: dev
@@ -13,23 +16,23 @@ spring:
 spring:
   profiles: dev
   application:
-    name: app-domain-order-server
+    name: app-server-domain-order
   cloud:
     config:
-      label: app-domain-order-server/dev
+      label: app-server-domain-order/dev
       discovery:
         enabled: true
-        service-id: app-config-server
+        service-id: app-server-config
 
 
 ---
 spring:
   profiles: prod
   application:
-    name: app-domain-order-server
+    name: app-server-domain-order
   cloud:
     config:
-      label: app-domain-order-server/prod
+      label: app-server-domain-order/prod
       discovery:
         enabled: true
-        service-id: app-config-server
+        service-id: app-server-config
