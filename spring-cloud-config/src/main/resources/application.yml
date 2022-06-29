@@ -1,6 +1,32 @@
+##spring##
+spring:
+  cloud:
+    bus:
+      enabled: true
+  rabbitmq:
+    host: 127.0.0.1
+    port: 49154
+    username: guest
+    password: guest
 
-server.port=8091
+##server##
+server:
+  port: 8091
 
-eureka.client.register-with-eureka=true
-eureka.client.fetch-registry=true
-eureka.client.service-url.defaultZone=http://127.0.0.1:8090/eureka/
+##eureka##
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8090/eureka/
+
+##management##
+management:
+  endpoint:
+    shutdown:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"

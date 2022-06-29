@@ -8,15 +8,7 @@
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>spring cloud learn</name>
-
-    <modules>
-        <module>spring-cloud-eureka</module>
-        <module>spring-cloud-gateway</module>
-        <module>spring-cloud-config</module>
-        <module>spring-cloud-kernel</module>
-        <module>spring-cloud-product</module>
-        <module>spring-cloud-order</module>
-    </modules>
+    
 
     <properties>
         <maven.compiler.target>1.8</maven.compiler.target>

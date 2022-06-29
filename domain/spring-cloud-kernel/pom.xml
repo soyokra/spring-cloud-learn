@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>com.soyokra.learn</groupId>
-        <artifactId>spring-cloud-learn</artifactId>
+        <artifactId>spring-cloud-domain</artifactId>
         <version>1.0.0</version>
     </parent>
 

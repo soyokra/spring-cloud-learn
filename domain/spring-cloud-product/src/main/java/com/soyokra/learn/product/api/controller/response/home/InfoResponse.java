@@ -1,9 +1,8 @@
-package com.soyokra.learn.product.api.controller.response;
+package com.soyokra.learn.product.api.controller.response.home;
 
-import com.soyokra.learn.product.domain.model.ProductModel;
 import lombok.Data;
 
 @Data
-public class ProductResponse {
-    ProductModel product;
+public class InfoResponse {
+    private String appTags;
 }

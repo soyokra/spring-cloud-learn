@@ -11,5 +11,4 @@ public class RibbonConfig {
     public IRule defaultLBStrategy() {
         return new RandomRule();
     }
-
 }

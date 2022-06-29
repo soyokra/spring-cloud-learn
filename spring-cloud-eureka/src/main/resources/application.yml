@@ -1,8 +1,18 @@
-spring.application.name=app-eureka-server
+##spring##
+spring:
+  application:
+    name: app-server-eureka
 
-server.port=8090
+##server##
+server:
+  port: 8090
 
-eureka.instance.hostname=localhost
-eureka.client.register-with-eureka=false
-eureka.client.fetch-registry=false
-eureka.client.service-url.defaultZone=http://127.0.0.1:8090/eureka/
+##eureka##
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8090/eureka/
+    register-with-eureka: false
+    fetch-registry: false
