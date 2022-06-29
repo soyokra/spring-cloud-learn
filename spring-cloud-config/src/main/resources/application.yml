@@ -1,3 +1,7 @@
+##server##
+server:
+  port: 8091
+
 ##spring##
 spring:
   cloud:
@@ -8,10 +12,6 @@ spring:
     port: 49154
     username: guest
     password: guest
-
-##server##
-server:
-  port: 8091
 
 ##eureka##
 eureka:

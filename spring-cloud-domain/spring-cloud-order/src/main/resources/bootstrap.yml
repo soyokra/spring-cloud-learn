@@ -1,0 +1,38 @@
+##eureka##
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8090/eureka/
+
+
+##spring##
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  application:
+    name: app-server-domain-order
+  cloud:
+    config:
+      label: app-server-domain-order/dev
+      discovery:
+        enabled: true
+        service-id: app-server-config
+
+
+---
+spring:
+  profiles: prod
+  application:
+    name: app-server-domain-order
+  cloud:
+    config:
+      label: app-server-domain-order/prod
+      discovery:
+        enabled: true
+        service-id: app-server-config

@@ -1,0 +1,23 @@
+##server##
+server:
+  port: 8081
+
+##spring##
+spring:
+  application:
+    name: app-server-domain-product
+  rabbitmq:
+    host: localhost
+    port: 49154
+    username: guest
+    password: guest
+
+##management##
+management:
+  endpoint:
+    shutdown:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"

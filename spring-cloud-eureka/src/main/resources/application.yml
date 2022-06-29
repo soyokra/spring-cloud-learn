@@ -1,11 +1,11 @@
+##server##
+server:
+  port: 8090
+
 ##spring##
 spring:
   application:
     name: app-server-eureka
-
-##server##
-server:
-  port: 8090
 
 ##eureka##
 eureka:
