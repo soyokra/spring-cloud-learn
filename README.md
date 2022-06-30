@@ -2,12 +2,14 @@
 [官网](https://spring.io/projects/spring-cloud#learn)
 
 ## 快速开始
-```shell
-1. 启动Eureka服务注册中心
-2. 启动Config配置中心
-3. 启动Domain领域服务
-4. 启动Gateway网关服务
-```
+> 1.启动Eureka服务注册中心
+> 
+> 2.启动Config配置中心
+> 
+> 3.启动Domain领域服务
+> 
+> 4.启动Gateway网关服务
+
 
 ## 组件版本
 - Spring Cloud Hoxton.SR12
@@ -19,5 +21,5 @@
 - Sleuth
 - Stream
 - Ribbon
-- openfeign
+- Openfeign
 - Hystrix
