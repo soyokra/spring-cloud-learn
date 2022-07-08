@@ -24,6 +24,7 @@
         <module>spring-cloud-config</module>
         <module>spring-cloud-eureka</module>
         <module>spring-cloud-gateway</module>
+        <module>spring-cloud-admin</module>
         <module>spring-cloud-domain</module>
     </modules>
 
@@ -43,6 +44,18 @@
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-server</artifactId>
+                <version>2.3.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-client</artifactId>
+                <version>2.3.1</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

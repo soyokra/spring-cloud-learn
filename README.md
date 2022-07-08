@@ -23,3 +23,12 @@
 - Ribbon
 - Openfeign
 - Hystrix
+
+
+## Q&A
+
+#### Question
+Eureka与host.docker.internal
+
+#### Answer
+https://dcsuibian.github.io/2021/05/23/Eureka%E4%B8%8Ehost-docker-internal/

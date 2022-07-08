@@ -17,6 +17,8 @@ management:
   endpoint:
     shutdown:
       enabled: false
+    health:
+      show-details: always
   endpoints:
     web:
       exposure:
